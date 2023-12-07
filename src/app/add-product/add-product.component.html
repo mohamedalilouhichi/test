@@ -1,0 +1,67 @@
+<p>add-product works!</p>
+<p>form-appartment works!</p>
+<div class="container">
+  <form [formGroup]="appartform">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">id</span>
+      </div>
+      <input
+        type="text"
+        aria-label="id"
+        name="numAppart"
+        id="numAppart"
+        class="form-control"
+        formControlName="numAppart"
+      />
+      
+    </div>
+    <br />
+
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">title</span>
+      </div>
+      <input
+        type="text"
+        aria-label="title"
+        class="form-control"
+        formControlName="title"
+      />
+      
+    </div>
+    <br />
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">price</span>
+      </div>
+      <input
+        type="text"
+        aria-label="price"
+        class="form-control"
+        formControlName="price"
+      />
+    </div>
+    <br />
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">quantity</span>
+        </div>
+        <input
+          type="text"
+          aria-label="quantity"
+          class="form-control"
+          formControlName="quantity"
+        />
+      </div>
+
+    <br />
+    <input
+      type="submit"
+      aria-label="add"
+      class="bg-primary"
+      value="add"
+      (click)="add()"
+    />
+  </form>
+</div>

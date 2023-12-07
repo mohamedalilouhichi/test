@@ -1,0 +1,21 @@
+<p>products works!</p>
+<table border="3">
+    <tr>
+        <td>Id</td>
+        <td>title</td>
+        <td>price</td>
+        <td>quantity</td>
+        <td>Like</td>
+        <td>show-product</td>
+    </tr>
+    <tr *ngFor="let p of listProduct ;let i=index">
+        <td>{{p.id}}</td>
+        <td>{{p.title}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.quantity}}</td>
+        <td>{{p.like}}</td>
+        <button [routerLink]="[ p.id]" class="btn btn-primary"> show product </button>
+        
+    </tr>
+</table>
+<a class="nav-link" routerLinkActivate="active" routerLink="/add">Add</a>
